@@ -12,7 +12,8 @@ const stateKey = 'spotify_auth_state';
 const app = express();
 
 const PORT = process.env.PORT || 3001;
-app.use(express.static(__dirname + '/public')).use(cors()).use(cookie());
+app.use(express.json());
+//app.use(express.static(__dirname + '/public')).use(cors()).use(cookie());
 
 app.get('/login', (req, res) => { // sends spotify auth request after user tries to log in
     let scope = 'user-read-private user-top-read';
