@@ -1,8 +1,6 @@
-const cors = require('cors');
 const express = require('express'); 
 const request = require('request'); 
 const query = require('querystring');
-const cookie = require('cookie-parser');
 
 const client_id = '50b5acca0e094bb9988a466ce49b7fe5'; // Your client ID and secret found
 const client_secret = 'c6da979415c3459b9c551c34cb3a6792'; // on the Spotify dashboard for your app
@@ -13,7 +11,6 @@ const app = express();
 
 const PORT = process.env.PORT || 3001;
 app.use(express.json());
-//app.use(express.static(__dirname + '/public')).use(cors()).use(cookie());
 
 app.get('/login', (req, res) => { // sends spotify auth request after user tries to log in
     let scope = 'user-read-private user-top-read';
