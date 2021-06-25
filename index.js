@@ -4,7 +4,7 @@ const query = require('querystring');
 
 const client_id = '50b5acca0e094bb9988a466ce49b7fe5'; // Your client ID and secret found
 const client_secret = 'c6da979415c3459b9c551c34cb3a6792'; // on the Spotify dashboard for your app
-const redirect_uri = 'http://localhost:3001/callback/'; // redirect site after authorization
+const redirect_uri = 'https://backend-trackify.herokuapp.com/callback/'; // redirect site after authorization
 const stateKey = 'spotify_auth_state';
 
 const app = express();
