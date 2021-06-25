@@ -12,9 +12,11 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 app.use(express.json());
 
+/*
 app.get('/', (req, res) => {
     res.send('Hello, World!');
 });
+*/
 
 app.get('/login', (req, res) => { // sends spotify auth request after user tries to log in
     let scope = 'user-read-private user-top-read';
@@ -68,7 +70,7 @@ app.get('/callback', (req, res) => { // after spotify redirects, second call is 
                     json: true
                 };
             
-                res.redirect('/#' + 
+                res.redirect('https://siddiquizubair.github.io/Trackify/?' + 
                     query.stringify({
                         access_token: access_token,
                         refresh_token: refresh_token
