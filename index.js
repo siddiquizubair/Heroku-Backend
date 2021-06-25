@@ -12,12 +12,6 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 app.use(express.json());
 
-/*
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-});
-*/
-
 app.get('/login', (req, res) => { // sends spotify auth request after user tries to log in
     let scope = 'user-read-private user-top-read';
     let state = '1234567890'
